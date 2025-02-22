@@ -26,6 +26,7 @@
 
   <title>Investigating the Impact of Temporal Delay in Radar-Inertial Odometry</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -45,8 +46,6 @@
   <script src="static/js/index.js"></script>
 </head>
 <body>
-
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -57,52 +56,41 @@
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?hl=en&user=B2C61mMAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Vlaho-Josip Štironja</a>,
-                </span>
-                <span class="author-block">
-                    Luka Petrović,
-                </span>
-                <span class="author-block">
-                  Juraj Peršić,
               </span>
-                <span class="author-block">
-                    Ivan Marković,
-                </span>
-                <span class="author-block">
-                    Ivan Petrović
-                </span>
-                  </div>
+              <span class="author-block">
+                Luka Petrović,
+              </span>
+              <span class="author-block">
+                Juraj Peršić,
+              </span>
+              <span class="author-block">
+                Ivan Marković,
+              </span>
+              <span class="author-block">
+                Ivan Petrović
+              </span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">University of Zagreb, Faculty of Electrical Engineering and Computing</span>
-                    <span class="author-block">Laboratory for Autonomous Systems and Mobile Robotics</span>
-                  </div>
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">University of Zagreb, Faculty of Electrical Engineering and Computing</span>
+              <span class="author-block">Laboratory for Autonomous Systems and Mobile Robotics</span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
                     </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
 
-                    <!-- Supplementary PDF link -->
-                    <!--span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span-->
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -114,53 +102,36 @@
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" style="padding-top: 10px; padding-bottom: 5px;">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full_width">
-        <hr style="margin-top: 10px">
-        <!--h2 class="title is-3">Model architecture</h2-->
-        <div class="columns is-centered">
-          <!-- Image 1 -->
-          <div class="column is-half">
-            <img src="static/images/test.png" class="center" style="width: 100%; height: auto;"/>
+  <section class="section" style="padding-top: 10px; padding-bottom: 5px;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full_width">
+          <hr style="margin-top: 5px; margin-bottom: 10px;">
+          <div class="columns is-centered" style="margin-bottom: 10px;">
+            <!-- Image 2 -->
+            <div class="column is-half" style="padding-left: 20px;">
+              <img src="static/images/3D.png" class="center" style="width: 120%; height: auto;"/>
+            </div>
           </div>
-          <!-- Image 2 -->
-          <div class="column is-half">
-            <img src="static/images/3D.png" class="center" style="width: 100%; height: auto;"/>
-          </div>
-        </div>
-        <div class="content has-text-justified">
-          <br>  
-          <p>
-            Trajectory comparison of EKF-RIO on a Mocap difficult sequence from the IRS dataset, using radar's original and corrected timestamps where temporal offset estimated using our estimator. 
-            Our proposed radar-inertial odometry (RIO) approach not only reduces odometry drift but also accurately estimates the time delay between the radar and IMU.  
-            The impact of temporal misalignment between radar and IMU on estimation accuracy becomes more pronounced with increased motion. 
-          </p>
-          <br>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-
+  </section>
 
 
 <!-- Paper abstract -->
@@ -182,6 +153,9 @@ Experimental results show that integration of online temporal calibration signif
   </div>
 </section>
 <!-- End paper abstract -->
+
+
+
 
 
 
