@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Investigating the Impact of Temporal Delay in Radar-Inertial Odometry</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,23 +52,30 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Investigating the Impact of Temporal Delay in Radar-Inertial Odometry</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://scholar.google.com/citations?hl=en&user=B2C61mMAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Vlaho-Josip Štironja</a>,
+                </span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                    Luka Petrović,
+                </span>
+                <span class="author-block">
+                  Juraj Peršić,
+              </span>
+                <span class="author-block">
+                    Ivan Marković,
+                </span>
+                <span class="author-block">
+                    Ivan Petrović
+                </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">University of Zagreb, Faculty of Electrical Engineering and Computing</span>
+                    <span class="author-block">Laboratory for Autonomous Systems and Mobile Robotics</span>
                   </div>
-
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
@@ -83,7 +90,7 @@
                     </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!--span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -91,7 +98,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span-->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -122,23 +129,39 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
+<section class="section" style="padding-top: 10px; padding-bottom: 5px;">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr style="margin-top: 10px">
+        <!--h2 class="title is-3">Model architecture</h2-->
+        <div class="columns is-centered">
+          <!-- Image 1 -->
+          <div class="column is-half">
+            <img src="static/images/test.png" class="center" style="width: 100%; height: auto;"/>
+          </div>
+          <!-- Image 2 -->
+          <div class="column is-half">
+            <img src="static/images/3D.png" class="center" style="width: 100%; height: auto;"/>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <br>  
+          <p>
+            Trajectory comparison of EKF-RIO on a Mocap difficult sequence from the IRS dataset, using radar's original and corrected timestamps where temporal offset estimated using our estimator. 
+            Our proposed radar-inertial odometry (RIO) approach not only reduces odometry drift but also accurately estimates the time delay between the radar and IMU.  
+            The impact of temporal misalignment between radar and IMU on estimation accuracy becomes more pronounced with increased motion. 
+          </p>
+          <br>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+
+
+
+
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -147,9 +170,12 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+          <p>Accurate ego-motion estimation is a critical component for any autonomous system. Traditional ego-motion sensors, such as cameras and LiDAR, may be compromised in adverse environmental conditions, such as fog, heavy rain, or dust. 
+Automotive radar, known for its robustness in such conditions, presents a promising alternative.
+This paper introduces a novel Radar-Inertial Odometry (RIO) system that integrates automotive radar and inertial measurements within a factor graph framework. 
+A key contribution of our work is the integration of online temporal delay calibration within the factor graph optimization framework, which compensates for potential time offsets between radar and IMU measurements.
+By accounting for temporal misalignment in real time, our method improves ego-motion estimation accuracy. 
+Experimental results show that integration of online temporal calibration significantly reduces localization errors compared to systems that disregard time synchronization, highlighting the important role of accurate temporal alignment in radar-based sensor fusion for autonomous navigation.</p>
         </div>
       </div>
     </div>
@@ -158,120 +184,99 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<section class="section" style="padding-top: 15px; padding-bottom: 5px;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr style="margin-top: 10px">
+        <h2 class="title is-3">Methodology</h2>
+        <section class="hero is-small">
+          <div class="container hero-body">
+            <div class="columns is-centered">
+              <!-- Image 1 with Bottom Alignment -->
+              <div class="column is-one-half-desktop" style="display: flex; flex-direction: column; justify-content: flex-end; align-items: center;">
+                <img src="static/images/time.png" alt="Car Image" style="width: 100%; height: auto;">
+              </div>
+              <!-- Image 2 with Bottom Alignment -->
+              <div class="column is-one-half-desktop" style="display: flex; flex-direction: column; justify-content: flex-end; align-items: center;">
+                <img src="static/images/FGO.png" alt="Intro Image" style="max-width: 100%; height: auto;">
+              </div>
+            </div>
+            <!-- Descriptions in New Row Below the Images -->
+            <div class="columns is-centered">
+              <!-- Description for Image 1 -->
+              <div class="column is-one-half-desktop has-text-centered">
+                <p>An illustration of a radar-inertial odometry system with imperfect radar-IMU data arrival. We estimate the temporal offset between radar measurements and IMU data and optimize it within the factor graph framework.</p>
+              </div>
+              <!-- Description for Image 2 -->
+              <div class="column is-one-half-desktop has-text-centered">
+                <p>Proposed factor graph structure. The factor graph consists of the IMU factor (<i>f<sub>IMU</sub></i>), the radar ego-velocity factor (<i>f<sub>R</sub></i>), and constant time offset factor (<i>f<sub>CT</sub></i>).</p>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+        <p class="has-text-justified">
+This method imposes no restrictions on environmental conditions, such as the presence of planar surfaces, i.e. ground plane estimation.
+The state is estimated using radar ego-velocity and inertial measurements from an IMU using a loosely coupled structure.
+The core idea is to adjust the radar ego-velocity factor by compensating for the velocity difference using the most recent IMU acceleration, with bias removed and gravity corrected, scaled by the time-offset state.
+Assuming constant acceleration around the last accelerometer measurement enables robust and accurate real-time ego-motion estimation while simultaneously estimating the temporal delay between radar and IMU measurements.<p>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
+
+
+
+
+<section class="section" style="padding-top: 10px; padding-bottom: 5px;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr style="margin-top: 10px">
+        <h2 class="title is-3">Results</h2>
+        <br>
+        <h3 align="left" class="title is-4">Temporal offset analysis</h3>
+        <br>
+        <img src="static/images/dt.png" class="center" style="width: 60%; height: auto;"/>
+        <br>
+        <br>
+        <div class="content has-text-justified">
+          <br>  
+          <p>Temporal offset convergence on the Gym sequence from the IRS dataset using proposed method. Radar measurements were artificially shifted forward by 2.5 ms to evaluate whether our proposed method correctly converges to the expected offset values.
+          </p>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
+        <br>
+        <h3 align="left" class="title is-4">Odometry analysis</h3>
+        <br>
+        <img src="static/images/table1.png" style="width: 100%; height: auto;" class="center"/>
+        <div class="content has-text-justified">
+          <br>  
+          <p>
+            Results demonstrate the benefit of integrating temporal delay in radar measurements and state, achieving accuracy competitive with, and in some cases surpassing, other state-of-the-art radar-inertial odometry algorithms.
+            The impact of temporal offset estimation is particularly evident in the most dynamic sequence, Mocap difficult, where omitting the offset leads to the largest discrepancies, decreasing ATE by 14.11%. 
+          </p>
         </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
+        <br>
+        <h3 align="left" class="title is-4">Impact of temporal offset on radar-inertial odometry</h3>
+        <br>
+        <img src="static/images/table2.png" style="width: 50%; height: auto;" class="center"/>
+        <div class="content has-text-justified"></div>
+        <p>
+          Taking into account and correcting the temporal offset between radar and IMU significantly improves the accuracy of state-of-the-art radar-inertial odometry methods.
+          </p>
+          </div>
       </div>
+
     </div>
   </div>
 </section>
-<!-- End video carousel -->
 
 
 
 
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 <!--BibTex citation -->
@@ -282,6 +287,23 @@
     </div>
 </section>
 <!--End BibTex citation -->
+
+
+<section class="section" id="acknowledgment">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr style="margin-top: 10px">
+        <h2 class="title is-3 has-text-left">Acknowledgment</h2>
+        <div class="content has-text-justified">
+          <p>
+            Will be added. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
   <footer class="footer">
