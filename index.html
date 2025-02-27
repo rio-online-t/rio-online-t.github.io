@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content=Impact of Temporal Delay on Radar-Inertial Odometry">
+  <meta name="description" content="Impact of Temporal Delay on Radar-Inertial Odometry">
   <meta property="og:title" content="RIO-T"/>
   <meta property="og:description" content="Impact of Temporal Delay on Radar-Inertial Odometry"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
@@ -90,7 +90,7 @@
 
                 <!-- Github link -->
                 <span class="link-block">
-                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                  <a href="https://github.com/StironjaVlaho/RAVE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -117,15 +117,15 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top: 10px; padding-bottom: 5px;">
+  <section class="section" style="padding-top: 2px; padding-bottom: 2px;">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full_width">
-          <hr style="margin-top: 5px; margin-bottom: 10px;">
-          <div class="columns is-centered" style="margin-bottom: 10px;">
+          <hr style="margin-top: 10px; margin-bottom: 20px;">
+          <div class="columns is-centered" style="margin-bottom: 20px;">
             <!-- Image 2 -->
             <div class="column is-half" style="padding-left: 20px;">
-              <img src="static/images/3D.png" class="center" style="width: 120%; height: auto;"/>
+              <img src="static/images/fig12.png" class="center" style="width: 150%; height: auto;"/>
             </div>
           </div>
         </div>
@@ -141,12 +141,13 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>Accurate ego-motion estimation is a critical component for any autonomous system. Traditional ego-motion sensors, such as cameras and LiDAR, may be compromised in adverse environmental conditions, such as fog, heavy rain, or dust. 
-Automotive radar, known for its robustness in such conditions, presents a promising alternative.
-This paper introduces a novel Radar-Inertial Odometry (RIO) system that integrates automotive radar and inertial measurements within a factor graph framework. 
-A key contribution of our work is the integration of online temporal delay calibration within the factor graph optimization framework, which compensates for potential time offsets between radar and IMU measurements.
-By accounting for temporal misalignment in real time, our method improves ego-motion estimation accuracy. 
-Experimental results show that integration of online temporal calibration significantly reduces localization errors compared to systems that disregard time synchronization, highlighting the important role of accurate temporal alignment in radar-based sensor fusion for autonomous navigation.</p>
+          <p>Accurate ego-motion estimation is a critical component of any autonomous system.
+            Conventional ego-motion sensors, such as cameras and LiDARs, may be compromised in adverse environmental conditions, such as fog, heavy rain, or dust. 
+            Automotive radars, known for their robustness to such conditions, present themselves as complementary sensors or a promising alternative within the ego-motion estimation frameworks.
+            In this paper we propose a novel Radar-Inertial Odometry (RIO) system that integrates an automotive radar and an inertial measurement unit. 
+            The key contribution is the integration of online temporal delay calibration within the factor graph optimization framework that compensates for potential time offsets between radar and IMU measurements.
+            To validate the proposed approach we have conducted thorough experimental analysis on real-world radar and IMU data.            
+            The results show that, even without scan matching or target tracking, integration of online temporal calibration significantly reduces localization error compared to systems that disregard time synchronization, thus highlighting the important role of, often neglected, accurate temporal alignment in radar-based sensor fusion systems for autonomous navigation.</p>
         </div>
       </div>
     </div>
@@ -191,10 +192,8 @@ Experimental results show that integration of online temporal calibration signif
           </div>
         </section>
         <p class="has-text-justified">
-This method imposes no restrictions on environmental conditions, such as the presence of planar surfaces, i.e. ground plane estimation.
-The state is estimated using radar ego-velocity and inertial measurements from an IMU using a loosely coupled structure.
-The core idea is to adjust the radar ego-velocity factor by compensating for the velocity difference using the most recent IMU acceleration, with bias removed and gravity corrected, scaled by the time-offset state.
-Assuming constant acceleration around the last accelerometer measurement enables robust and accurate real-time ego-motion estimation while simultaneously estimating the temporal delay between radar and IMU measurements.<p>
+          The proposed method, dubbed RIO-T (Radar-Inertial Odometry with Temporal Offset Calibration), estimates odometry using a loosely coupled radar-inertial sensor fusion approach implemented within a factor graph optimization framework. The method imposes no assumptions on the environment, such as the presence of planar surfaces, i.e., ground plane estimation. The core idea is to adjust the radar ego-velocity factor by compensating for the velocity difference using the most recent IMU acceleration, with having the bias removed and measurement corrected for gravity, and scaled by the time-offset state. The assumption of constant acceleration around the last acceleration measurement provides a robust and accurate real-time estimate of ego motion while estimating the time lag between radar and IMU measurements.
+          <p>
       </div>
     </div>
   </div>
@@ -219,9 +218,20 @@ Assuming constant acceleration around the last accelerometer measurement enables
         <br>
         <div class="content has-text-justified">
           <br>  
-          <p>Temporal offset convergence on the Gym sequence from the IRS dataset using proposed method. Radar measurements were artificially shifted forward by 2.5 ms to evaluate whether our proposed method correctly converges to the expected offset values.
+          <p>Convergence of the temporal offset in the Gym sequence from the IRS dataset using the proposed method. The radar measurements were artificially shifted forward in time in steps of 2.5 ms to check whether the proposed method converges correctly to the expected offset values.
           </p>
         </div>
+        <br>
+        <img src="static/images/3dt.png" class="center" style="width: 60%; height: auto;"/>
+        <br>
+        <br>
+        <div class="content has-text-justified">
+          <br>  
+          <p>Convergence of the temporal offset in the Mocap difficult sequence from the IRS dataset using the proposed method. The radar measurements were artificially shifted by 112.15 ms to simulate the time delay of a radar of 100 ms as estimated temporal offset was -12.15 ms. We tested our method over three iterations to evaluate its convergence ability even with large temporal offsets.
+          </p>
+        </div>
+        
+        
         <br>
         <h3 align="left" class="title is-4">Odometry analysis</h3>
         <br>
@@ -229,9 +239,9 @@ Assuming constant acceleration around the last accelerometer measurement enables
         <div class="content has-text-justified">
           <br>  
           <p>
-            Results demonstrate the benefit of integrating temporal delay in radar measurements and state, achieving accuracy competitive with, and in some cases surpassing, other state-of-the-art radar-inertial odometry algorithms.
-            The impact of temporal offset estimation is particularly evident in the most dynamic sequence, Mocap difficult, where omitting the offset leads to the largest discrepancies, decreasing ATE by 14.11%. 
-          </p>
+            The results show the advantage of integrating the temporal offset into the radar measurements and the state, achieving an accuracy that can compete with other modern radar inertial odometry algorithms and in some cases even surpasses them. 
+
+The effect of estimating the temporal offset is particularly evident in the most dynamic sequence, Mocap difficult, where omitting the offset leads to the largest discrepancies, reducing the ATE by 14.11%.          </p>
         </div>
         <br>
         <h3 align="left" class="title is-4">Impact of temporal offset on radar-inertial odometry</h3>
@@ -240,7 +250,8 @@ Assuming constant acceleration around the last accelerometer measurement enables
         <div class="content has-text-justified"></div>
         <p>
           Taking into account and correcting the temporal offset between radar and IMU significantly improves the accuracy of state-of-the-art radar-inertial odometry methods.
-          </p>
+          Time offsets were estimated using our proposed method.
+        </p>
           </div>
       </div>
 
@@ -271,7 +282,7 @@ Assuming constant acceleration around the last accelerometer measurement enables
         <h2 class="title is-3 has-text-left">Acknowledgment</h2>
         <div class="content has-text-justified">
           <p>
-            Will be added. 
+            This research has been supported by the European Regional Development Fund under the grant PK.1.1.02.0008 (DATACROSS). 
           </p>
         </div>
       </div>
