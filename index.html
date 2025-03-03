@@ -171,7 +171,7 @@
             <div class="columns is-centered">
               <!-- Image 1 with Bottom Alignment -->
               <div class="column is-one-half-desktop" style="display: flex; flex-direction: column; justify-content: flex-end; align-items: center;">
-                <img src="static/images/time.png" alt="Car Image" style="width: 100%; height: auto;">
+                <img src="static/images/measurement.gif" alt="Car Image" style="width: 100%; height: auto;">
               </div>
               <!-- Image 2 with Bottom Alignment -->
               <div class="column is-one-half-desktop" style="display: flex; flex-direction: column; justify-content: flex-end; align-items: center;">
@@ -213,7 +213,7 @@
         <br>
         <h3 align="left" class="title is-4">Temporal offset analysis</h3>
         <br>
-        <img src="static/images/dt.png" class="center" style="width: 60%; height: auto;"/>
+        <video src="static/images/t1.mp4" class="center" style="width: 60%; height: auto;" autoplay muted loop></video>
         <br>
         <br>
         <div class="content has-text-justified">
@@ -222,7 +222,7 @@
           </p>
         </div>
         <br>
-        <img src="static/images/3dt.png" class="center" style="width: 60%; height: auto;"/>
+        <video src="static/images/t2.mp4" class="center" style="width: 60%; height: auto;" autoplay muted loop></video>
         <br>
         <br>
         <div class="content has-text-justified">
@@ -241,7 +241,7 @@
           <p>
             The results show the advantage of integrating the temporal offset into the radar measurements and the state, achieving an accuracy that can compete with other modern radar inertial odometry algorithms and in some cases even surpasses them. 
 
-The effect of estimating the temporal offset is particularly evident in the most dynamic sequence, Mocap difficult, where omitting the offset leads to the largest discrepancies, reducing the ATE by 14.11%.          </p>
+      The effect of estimating the temporal offset is particularly evident in the most dynamic sequence, Mocap difficult, where omitting the offset leads to the largest discrepancies, reducing the ATE by 14.11%.          </p>
         </div>
         <br>
         <h3 align="left" class="title is-4">Impact of temporal offset on radar-inertial odometry</h3>
@@ -252,26 +252,27 @@ The effect of estimating the temporal offset is particularly evident in the most
           Taking into account and correcting the temporal offset between radar and IMU significantly improves the accuracy of state-of-the-art radar-inertial odometry methods.
           Time offsets were estimated using our proposed method.
         </p>
+        <br>
+        <video src="static/images/ate.mp4" class="center" style="width: 60%; height: auto;" autoplay muted loop></video>
+        <br>
+        <div class="content has-text-centered">
+          <p>
+            Visualization of the results on the mocap dark sequence.
+          </p>
+        </div>
+
+
+
+
+
+        <!--BibTex citation -->
+        <section class="section" id="BibTeX">
+          <div class="container is-max-desktop content has-text-justified"></div>
+            <h2 class="title">BibTeX</h2>
+            <pre><code>BibTex Code Here</code></pre>
           </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
+        </section>
+        <!--End BibTex citation -->
 
 
 <section class="section" id="acknowledgment">
